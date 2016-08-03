@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <title>My First Express App</title>
+</head>
+<body>
+  <img src="<%= ghAvatar %>" class="avatar" />
+  <p><%= intro %></p>
+  <h2>My skills are:</h2>
+  <ul>
+    <% skills.forEach(function(skill){ %>
+      <li> <%= skill %> </li>
+    <% }) %>
+  </ul>
+  <h2>My hobbies are:</h2>
+  <ul>
+    <% hobbies.forEach(function(hobby){ %>
+      <li> <%= hobby %> </li>
+    <% }) %>
+  </ul>
+</body>
+</html>
