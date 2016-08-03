@@ -8,6 +8,8 @@ const ghAvatar = require('gh-avatar'); // dependencies from npm (package.json)
 // Initialize our app
 const app = express();
 
+app.use(express.static(__dirname + '/public'));
+
 //Set our views directory
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -20,14 +22,12 @@ app.set('view engine', 'ejs');
 // Add a route to our app that renders our index view
 app.get('/', function(req, res, next) {
   ghAvatar('jasonburks').then(avatar => {
-      res.render('index.ejs', {
-        ghAvatar: avatar,
-        intro: 'Hi! My name is Jason Burks. I live in Austin, TX and am a hack Web Developer',
-        skills: ['HTML', 'CSS', 'JavaScript', 'Node.js/Express.js', 'MongoDB/Mongoose.js', 'Backbone.js'],
-        hobbies: ['Netflix', 'Coding', 'Boozing']
-      });
-      console.log(avatar);
-      //=> 'https://avatars.githubusercontent.com/u/170270?v=3'
+    res.render('index.ejs', {
+      ghAvatar: avatar,
+      intro: 'Hi! My name is Jason Burks. I live in Austin, TX and am a hack Web Developer',
+      skills: ['HTML', 'CSS', 'JavaScript', 'Node.js/Express.js', 'MongoDB/Mongoose.js', 'Backbone.js'],
+      hobbies: ['Netflix', 'Coding', 'Boozing']
+    });
   });
 });
 

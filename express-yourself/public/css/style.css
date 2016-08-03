@@ -1,0 +1,26 @@
+.avatar {
+  width: 150px;
+	height: 150px;
+	-webkit-border-radius: 30px; /* Saf3+, Chrome */
+	border-radius: 30px; /* Opera 10.5, IE 9 */
+	/*-moz-border-radius: 30px;  Disabled for FF1+ */
+  border: 1px #3B3738 solid;
+}
+
+.float-left {
+  float: left;
+}
+
+figure {
+  padding-bottom: 150px;
+}
+
+figcaption {
+  padding-top: 75px;
+  padding-left: 20px;
+  padding-bottom: 30px;
+}
+
+section {
+  clear: both
+}

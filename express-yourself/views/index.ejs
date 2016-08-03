@@ -2,23 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="style.css">
+  <link href="css/style.css" rel="stylesheet" type="text/css">
   <title>My First Express App</title>
 </head>
 <body>
-  <img src="<%= ghAvatar %>" class="avatar" />
-  <p><%= intro %></p>
-  <h2>My skills are:</h2>
-  <ul>
-    <% skills.forEach(function(skill){ %>
-      <li> <%= skill %> </li>
-    <% }) %>
-  </ul>
-  <h2>My hobbies are:</h2>
-  <ul>
-    <% hobbies.forEach(function(hobby){ %>
-      <li> <%= hobby %> </li>
-    <% }) %>
-  </ul>
+  <figure>
+    <img src="<%= ghAvatar %>" class="avatar float-left" />
+    <figcaption class="float-left"><%= intro %></figcaption>
+  </figure>
+  <section>
+    <h2>My skills are:</h2>
+    <ul>
+      <% skills.forEach(function(skill){ %>
+        <li> <%= skill %> </li>
+      <% }) %>
+    </ul>
+    <h2>My hobbies are:</h2>
+    <ul>
+      <% hobbies.forEach(function(hobby){ %>
+        <li> <%= hobby %> </li>
+      <% }) %>
+    </ul>
+  </section>
 </body>
 </html>
